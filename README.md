@@ -5,6 +5,9 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 **NOTICE:** You are only allowed so much free usage before they want you to upgrade to a paid plan when visitors need to hit your failover pages. So make sure you configure the domains to block a lot of Ai / Crawler / Bot / Under Attack Traffic, so you dont need to upgrade.
 
+**THIS WILL NOT WORK FOR ALL DOMAINS**
+some websites like YunoHost with its SSO, i cant seem to get it to work, So if you find away to get it to work with sites like that, Let me know.
+
 ---
 
 ## Steps to Set Up
