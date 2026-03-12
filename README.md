@@ -7,6 +7,17 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ## Steps to Set Up
 
+### 1. Create your free page (skip this if you wanna have fail backup go somewhere else)
+1. Go to [Cloudflare Workers & Pages](https://workers.cloudflare.com/)  
+2. Click **Create a Worker**  
+3. Click on: Looking to deploy Pages? Get started
+4. 4. Pick from Import or Drag (upload your files)
+5. now make sure you copy the url to use in the EDIT_Code.txt later and Edit Code Box.
+
+---
+
+## Steps to Set Up
+
 ### 1. Create a Cloudflare Worker
 1. Go to [Cloudflare Workers & Pages](https://workers.cloudflare.com/)  
 2. Click **Create a Worker**  
@@ -16,7 +27,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ---
 
-### 2. Go back to Cloudflare and select your worker (`domain_failover.*username*`)
+### 3. Go back to Cloudflare and select your worker (`domain_failover.*username*`)
 1. Click on Settings Tab, look for Domains & Routes
    - click on +Add
    - Pick ROUTE
@@ -26,7 +37,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
    - Then Update Route.
 
 ---
-### 3. Edit the Worker Code
+### 4. Edit the Worker Code
 1. On GitHub, look for the file `EDIT_CODE.txt` (it may refer to `EDIT_Code.zip`)  
    - GitHub changes code formatting frequently, so the zip version is recommended.  
    - Cloudflare may also auto-format the code when pasted, so it’s best to edit in Notepad or another text editor first.  
@@ -36,7 +47,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ---
 
-### 4. Customize the Code
+### 5. Customize the Code
 1. Open `EDIT_Code.txt` or the unzipped `EDIT_Code` folder.  
 2. Replace the default backup and live URLs with your own:
 
