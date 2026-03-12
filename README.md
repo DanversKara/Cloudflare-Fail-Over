@@ -1,6 +1,8 @@
 # Cloudflare-ReRoute-Server-Down-to-another-server
 redirect visitors to a backup server when the primary is unreachable
 
+this is the cheap way.. poor mans fail over
+
 1. Goto Cloudflare Workers & Pages
 2. click on Create a Worker
 3. click on Start with Hello World!
