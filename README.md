@@ -18,7 +18,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ## Steps to Set Up
 
-### 1. Create a Cloudflare Worker
+### 2. Create a Cloudflare Worker
 1. Go to [Cloudflare Workers & Pages](https://workers.cloudflare.com/)  
 2. Click **Create a Worker**  
 3. Choose **Start with Hello World!**  
