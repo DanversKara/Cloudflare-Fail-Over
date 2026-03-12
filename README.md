@@ -1,32 +1,39 @@
-# Cloudflare-ReRoute-Server-Down-to-another-server
-redirect visitors to a backup server when the primary is unreachable
+# Cloudflare ReRoute: Server Down Failover
 
-this is the cheap way.. poor mans fail over
+Redirect visitors to a backup server when the primary server is unreachable.  
+This is a “poor man’s” failover solution using **Cloudflare Workers & Pages**.
 
-1. Goto Cloudflare Workers & Pages
-2. click on Create a Worker
+---
 
-4. click on Start with Hello World!
+## Steps to Set Up
 
-6. call it / name it: domain_failover.(gray out domain you cant edit *username)
+### 1. Create a Cloudflare Worker
+1. Go to [Cloudflare Workers & Pages](https://workers.cloudflare.com/)  
+2. Click **Create a Worker**  
+3. Choose **Start with Hello World!**  
+4. Name your worker: `domain_failover.*username*` (the domain part is grayed out and cannot be edited)  
+5. Click **Deploy**  
 
-8. click on deploy
+---
 
-9. on GitHub look for file EDIT_CODE.txt it will then say to look for EDIT_Code.zip, github keeps chaning the code, so i had to zip it.
-    Also cloudflare will also edit the code once you paste it into edit code box - so just edit the urls/code on a notepad, then past it into the edit code box.
+### 2. Edit the Worker Code
+1. On GitHub, look for the file `EDIT_CODE.txt` (it may refer to `EDIT_Code.zip`)  
+   - GitHub changes code formatting frequently, so the zip version is recommended.  
+   - Cloudflare may also auto-format the code when pasted, so it’s best to edit in Notepad or another text editor first.  
 
-11. go back to cloudflare and click on the worker you named domain_failover.(gray out domain you cant edit *username)
+2. Go back to Cloudflare and select your worker (`domain_failover.*username*`)  
+3. Click **Edit Code**  
 
-12. edit the code by clicking on EDIT CODE BUTTON
+---
 
-13. the EDIT_Code.txt/zip - edit it outside cloudflare how you need it with the correct urls, then paste into edit code box but you must first change the domains/urls as it i have it default to mine.
-look for
-<p>const backup = "https://karas-page-home.pages.dev";</p>
-<p></p>backupUrl.hostname = "karas-page-home.pages.dev";</p>
-</p>and replace the code with your cloudflare url as they are mine as default</p>
+### 3. Customize the Code
+1. Open `EDIT_Code.txt` or the unzipped `EDIT_Code` folder.  
+2. Replace the default backup and live URLs with your own:
 
-15. replace cloudflare Workers & Pages domain with your domain of the backup website domain -> fail over domain return fetch("https://karas-page-home.pages.dev");
-16. replace domain http://karas.page with your live domain all visitors see -> const origin = "http://karas.page";
+```javascript
+// Replace with your live domain (all visitors see this)
+const origin = "http://your-live-domain.com";
 
-17. under Domains & Routes click on +Add then Zone is the default domain, then Route enter your domain DO NOT ADD /* then Failure Mode click on FAIL OPEN (PROCEED)
-18. go disconnect connection to live server/domain and after 1 minute go see if backup server is live from fail over.
+// Replace with your backup Cloudflare Pages domain
+const backup = "https://your-backup-pages.pages.dev";
+backupUrl.hostname = "your-backup-pages.pages.dev";
