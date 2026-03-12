@@ -16,7 +16,17 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ---
 
-### 2. Edit the Worker Code
+### 2. Go back to Cloudflare and select your worker (`domain_failover.*username*`)
+1. Click on Settings Tab, look for Domains & Routes
+   - click on +Add
+   - Pick ROUTE
+   - Pick Zone, find the live domain you want users togo to when domain is live.
+   - Route Box: type in your Domain example/* (must put /* at the end) sometimes you might *.example/* - this depands on what you are doing on the live server.
+   - Failure Mode, Pick Fail Open (proceed)
+   - Then Update Route.
+
+---
+### 3. Edit the Worker Code
 1. On GitHub, look for the file `EDIT_CODE.txt` (it may refer to `EDIT_Code.zip`)  
    - GitHub changes code formatting frequently, so the zip version is recommended.  
    - Cloudflare may also auto-format the code when pasted, so it’s best to edit in Notepad or another text editor first.  
@@ -26,7 +36,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 
 ---
 
-### 3. Customize the Code
+### 4. Customize the Code
 1. Open `EDIT_Code.txt` or the unzipped `EDIT_Code` folder.  
 2. Replace the default backup and live URLs with your own:
 
