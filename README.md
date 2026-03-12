@@ -14,7 +14,8 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 2. Click **Create a Worker**  
 3. Click on: Looking to deploy Pages? Get started
 4. 4. Pick from Import or Drag (upload your files)
-5. now make sure you copy the url to use in the EDIT_Code.txt later and Edit Code Box.
+5. Name your worker: `domain_failover_page.*username*` (the domain part is grayed out and cannot be edited)  
+6. now make sure you copy the url to use in the EDIT_Code.txt later and Edit Code Box.
 
 ---
 
@@ -22,7 +23,7 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 1. Go to [Cloudflare Workers & Pages](https://workers.cloudflare.com/)  
 2. Click **Create a Worker**  
 3. Choose **Start with Hello World!**  
-4. Name your worker: `domain_failover.*username*` (the domain part is grayed out and cannot be edited)  
+4. Name your worker: `domain_failover_code.*username*` (the domain part is grayed out and cannot be edited)  
 5. Click **Deploy**  
 
 ---
