@@ -1,4 +1,4 @@
-my script export default {
+export default {
   async fetch(request) {
 
     const origin = "http://karas.page";
@@ -20,8 +20,6 @@ my script export default {
         text.includes("502") ||
         text.includes("Bad Gateway") ||
         text.includes("nginx")
-                text.includes("no proxy host matches this domain")
-                                text.includes("Nginx Proxy Manager")
       ) {
         throw new Error("Origin returned error page");
       }
