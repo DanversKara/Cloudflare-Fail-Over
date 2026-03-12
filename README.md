@@ -24,7 +24,8 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 2. Click **Create a Worker**  
 3. Choose **Start with Hello World!**  
 4. Name your worker: `domain_failover_code.*username*` (the domain part is grayed out and cannot be edited)  
-5. Click **Deploy**  
+5. Click **Deploy**
+6. Now make sure you copy the url to use in the EDIT_Code.txt later and Edit Code Box.
 
 ---
 
