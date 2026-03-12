@@ -21,8 +21,8 @@ this is the cheap way.. poor mans fail over
 
 13. the EDIT_Code.txt/zip - edit it outside cloudflare how you need it with the correct urls, then paste into edit code box but you must first change the domains/urls as it i have it default to mine.
 look for
-const backup = "https://karas-page-home.pages.dev";
-backupUrl.hostname = "karas-page-home.pages.dev";
+<p>const backup = "https://karas-page-home.pages.dev";</p>
+<p></p>backupUrl.hostname = "karas-page-home.pages.dev";</p>
 and replace the code with your cloudflare url as they are mine as default
 
 15. replace cloudflare Workers & Pages domain with your domain of the backup website domain -> fail over domain return fetch("https://karas-page-home.pages.dev");
