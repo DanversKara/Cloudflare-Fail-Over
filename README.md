@@ -1,9 +1,9 @@
 # Cloudflare ReRoute: Server Down Failover
 
 Redirect visitors to a backup server when the primary server is unreachable.  
-This is a “poor man’s” failover solution using 
+This is a “poor man’s” failover solution using **Cloudflare Workers & Pages**. 
 
-**Cloudflare Workers & Pages**. **you are only allowed so much free usage before they want you to upgrade to a paid plan when visitors need to hit your failover pages)**. So make sure you configure the domains to block a lot of Ai / Crawler / Bot / Under Attack Traffic, so you dont need to upgrade.
+**NOTICE: ** You are only allowed so much free usage before they want you to upgrade to a paid plan when visitors need to hit your failover pages. So make sure you configure the domains to block a lot of Ai / Crawler / Bot / Under Attack Traffic, so you dont need to upgrade.
 
 ---
 
