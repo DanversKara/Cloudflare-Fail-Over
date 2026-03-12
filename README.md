@@ -2,33 +2,46 @@
 redirect visitors to a backup server when the primary is unreachable
 
 1. Goto Cloudflare Workers & Pages
-Build & deploy serverless functions, sites, and full-stack applications.
 2. click on Create a Worker
 3. click on Start with Hello World!
-4. call it domain_failover.
-5. deploy
-6. Edit Code Button top right
-7. Paste Code from File (Edit_Code.txt)
-8. change
+4. call it / name it: domain_failover.(gray out domain you cant edit *username)
+5. click on deploy
+6. on GitHub look for file EDIT_CODWE.txt
+7. go back to cloudflare and click on the worker you named domain_failover.(gray out domain you cant edit *username)
+8. edit the code
+
+look for
 text.includes("404") ||
         text.includes("502") ||
         text.includes("Bad Gateway") ||
         text.includes("nginx")
 
-to match what you want it to detect
+return fetch("https://karas-page-home.pages.dev");
 
-9. create another worker page with backup of your website or goto step 10.
+const origin = "http://karas.page";
 
-10. (this is the failover domain)
-edit       return fetch("https://karas-page-home.pages.dev");
+9. change the code to match your specs
+so replace 502, Bad Gateway, Nginx, 404, with what you want cloudflare to search for.
 
-replace domain with your worker page domain or your new fail over domain
+10. replace cloudflare Workers & Pages domain with your domain of the backup website domain -> fail over domain return fetch("https://karas-page-home.pages.dev");
+11. replace domain http://karas.page with your live domain all visitors see -> const origin = "http://karas.page";
+12. Add a Trigger
+- go back to domain_failover.(gray out domain you cant edit *username) from step 4
+13. goto settings and look for Trigger Events
+14. click +Add
+15. Cron Triggers
+16. Execute Worker every Minute(s)
+17. every 1
+18. click Add
+19. Trigger Events should look like
 
-11. (this is live domain)
-edit     const origin = "http://karas.page";
+Type
+Handler
+Details
+Cron
+scheduled()
+*/1 * * * *
+Schedule:Every minute View events
+Next:Thu, 12 Mar 2026 00:54:00
 
-with your domain that all visitors goto when its working
-
-12. click top right Deply button
-
-13. that should be it
+20. go disconnect connection to live server/domain and after 1 minute go see if backup server is live from fail over.
