@@ -36,3 +36,6 @@ const origin = "http://your-live-domain.com";
 
 // Replace with your backup Cloudflare Pages domain
 backupUrl.hostname = "your-cloudflare-backup-pages.pages.dev";
+// Also Change the text from NPM-LOCAL and Bad Gateway, to whatever you want Cloudflare to detect as in look for to discover the page isnt live anymore. also ( ||) is needed do not alter - ask Ai to better re-write your code if you need to add or remove  ||.
+          text.includes("NPM-LOCAL") ||
+          text.includes("Bad Gateway")
