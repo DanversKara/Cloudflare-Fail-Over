@@ -23,7 +23,7 @@ this is the cheap way.. poor mans fail over
 look for
 <p>const backup = "https://karas-page-home.pages.dev";</p>
 <p></p>backupUrl.hostname = "karas-page-home.pages.dev";</p>
-and replace the code with your cloudflare url as they are mine as default
+</p>and replace the code with your cloudflare url as they are mine as default</p>
 
 15. replace cloudflare Workers & Pages domain with your domain of the backup website domain -> fail over domain return fetch("https://karas-page-home.pages.dev");
 16. replace domain http://karas.page with your live domain all visitors see -> const origin = "http://karas.page";
