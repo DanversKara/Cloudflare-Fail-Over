@@ -12,15 +12,15 @@ this is the cheap way.. poor mans fail over
 
 8. click on deploy
 
-9. on GitHub look for file EDIT_CODE.txt it will then say to look for EDIT_Code.zip, github keeps chaning the code, so i had to zip it, also cloudflare once you paste it into box will edit the code so if you copy paste to note pad it wont be the same. any edits must be done outside couldflare then re-paste back into box.
+9. on GitHub look for file EDIT_CODE.txt it will then say to look for EDIT_Code.zip, github keeps chaning the code, so i had to zip it.
+    Also cloudflare will also edit the code once you paste it into edit code box - so just edit the urls/code on a notepad, then past it into the edit code box.
 
 11. go back to cloudflare and click on the worker you named domain_failover.(gray out domain you cant edit *username)
 
 12. edit the code by clicking on EDIT CODE BUTTON
 
-13. the EDIT_Code.txt/zip - edit it outside cloudflare how you need it with the correct urls, then paste into edit code box.
-
-14. look for
+13. the EDIT_Code.txt/zip - edit it outside cloudflare how you need it with the correct urls, then paste into edit code box but you must first change the domains/urls as it i have it default to mine.
+look for
 const backup = "https://karas-page-home.pages.dev";
 backupUrl.hostname = "karas-page-home.pages.dev";
 and replace the code with your cloudflare url as they are mine as default
