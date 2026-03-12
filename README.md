@@ -46,4 +46,5 @@ scheduled()
 Schedule:Every minute View events
 Next:Thu, 12 Mar 2026 00:54:00
 
-20. go disconnect connection to live server/domain and after 1 minute go see if backup server is live from fail over.
+20. under Domains & Routes click on +Add then Zone is the default domain, then Route enter your domain DO NOT ADD /* then Failure Mode click on FAIL OPEN (PROCEED)
+21. go disconnect connection to live server/domain and after 1 minute go see if backup server is live from fail over.
