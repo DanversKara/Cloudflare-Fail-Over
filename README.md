@@ -35,5 +35,4 @@ This is a “poor man’s” failover solution using **Cloudflare Workers & Page
 const origin = "http://your-live-domain.com";
 
 // Replace with your backup Cloudflare Pages domain
-const backup = "https://your-backup-pages.pages.dev";
-backupUrl.hostname = "your-backup-pages.pages.dev";
+backupUrl.hostname = "your-cloudflare-backup-pages.pages.dev";
